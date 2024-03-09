@@ -29,7 +29,9 @@ export default function Selected({quantity, onClear, onSearch}: Props) {
          onPress={onClear}
          color={theme.colors.gray_400}/>
     </View>
-    <Button/>
+
+    <Button title={'Encontrar'} onPress={onSearch}/>
+
    </Animated.View>
   );
 }

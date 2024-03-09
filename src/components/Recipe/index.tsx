@@ -3,8 +3,9 @@ import {
   Text,
   TouchableOpacity,
   TouchableOpacityProps,
-} from "react-native"
-import { LinearGradient } from "expo-linear-gradient"
+} from "react-native";
+import { LinearGradient } from 'expo-linear-gradient';
+
 
 import { styles } from "./styles"
 
