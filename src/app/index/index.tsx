@@ -30,11 +30,11 @@ export default function Index() {
     }
 
     function handleSearch() {
-        router.navigate("/recipes")
+        router.navigate("/recipes/" + selected)
     }
 
     useEffect(() => {
-        services.ingredients.findAll().then(console.log)
+        services.ingredients.findAll().then(setIngredients)
     },[])
 
     return (
@@ -54,7 +54,7 @@ export default function Index() {
                     key={item.id}
                     selected={selected.includes(item.id)}
                     name={item.name} 
-                    image={item.image}
+                    image={`${services.storage.imagePath}/${item.image}`}
                     onPress={ () => handleToggleSelected(item.id)} />
              ))}
         </ScrollView>
